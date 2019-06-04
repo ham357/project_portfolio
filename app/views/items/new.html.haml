@@ -1,0 +1,21 @@
+.row
+  = form_for @item,class: "col s12" do |f|
+    .row
+      .input-field.col.s6
+        = f.text_field :title, id: "input_text",'data-length': "10"
+        = f.label :title, "Title"
+    .row
+      .input-field.col.s6
+        = f.text_area :description, id: "textarea2", class: "materialize-textarea",'data-length': "120"
+        = f.label :description, "Description"
+    .row
+      .file-field.input-field.col.s6
+        .btn
+          %span File
+          = f.file_field :image
+        .file-path-wrapper
+          = f.text_field :image, class: "file-path validate"
+    %button.btn.waves-effect.waves-light{:name => "action", :type => "submit"}
+      Submit
+      %i.material-icons.right send
+
