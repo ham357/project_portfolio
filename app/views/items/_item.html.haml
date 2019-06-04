@@ -1,0 +1,11 @@
+.col.s12.m6.l3
+  .card.hoverable
+    .card-image
+      = image_tag item.image.url, alt: item.title
+    .card-content
+      %span.card-title
+        = item.title
+      %p 
+        = item.description
+    .card-action
+      %a{:href => "#"} This is a link
