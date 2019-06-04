@@ -1,58 +1,52 @@
-%nav
-  .nav-wrapper
-    %a.brand-logo{:href => "#!"}
-      %i.material-icons> cloud
-      Logo
-    %ul.right.hide-on-med-and-down
-      %li
-        %a{:href => "sass.html"}
-          %i.material-icons search
-      %li
-        %a{:href => "badges.html"}
-          %i.material-icons view_module
-      %li
-        %a{:href => "collapsible.html"}
-          %i.material-icons refresh
-      %li
-        %a{:href => "mobile.html"}
-          %i.material-icons more_vert
-.parallax-container
-  .parallax
-    %img{:src => "images/parallax1.jpg"}/
-%h4 Popout Accordion
-%ul.collapsible.popout{"data-collapsible" => "accordion"}
-  %li
-    .collapsible-header
-      %i.material-icons> filter_drama
-      First Section
-    .collapsible-body
-      %p This is first section.
-  %li
-    .collapsible-header
-      %i.material-icons> place
-      Second Section
-    .collapsible-body
-      %p This is second section.
-  %li
-    .collapsible-header
-      %i.material-icons> whatshot
-      Third Section
-    .collapsible-body
-      %p This is third section.
+%header
+  %nav
+    .nav-wrapper
+      %a.brand-logo{:href => "#"} Logo
+      %ul#nav-mobile.right.hide-on-med-and-down
+        %li
+          %a{:href => "sass.html"} Sass
+        %li
+          %a{:href => "badges.html"} Components
+        %li
+          %a{:href => "collapsible.html"} JavaScript
+
 .row
   .col.s12.m6.l3
-    .card
+    .card.hoverable
       .card-image
-        %img{:src => "images/sample-1.jpg"}/
-        %span.card-title Card Title
+        %img{:src => "uploads/no_image.jpg"}/
       .card-content
+        %span.card-title Card Title
         %p
           I am a very simple card. I am good at containing small bits of information.
           I am convenient because I require little markup to use effectively.
       .card-action
         %a{:href => "#"} This is a link
-%a.btn-floating.btn-large.waves-effect.waves-light.red
-  %i.material-icons add
+  .col.s12.m6.l3
+    .card.hoverable
+      .card-image
+        %img{:src => "uploads/no_image.jpg"}/
+      .card-content
+        %span.card-title Card Title
+        %p
+          I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.
+      .card-action
+        %a{:href => "#"} This is a link
+  .col.s12.m6.l3
+    .card.hoverable
+      .card-image
+        %img{:src => "uploads/no_image.jpg"}/
+      .card-content
+        %span.card-title Card Title
+        %p
+          I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.
+      .card-action
+        %a{:href => "#"} This is a link
+.fixed-action-btn
+  %a.btn-floating.btn-large.red
+    %i.large.material-icons mode_edit
 .row
   .col.s12.m5
     .card-panel.teal
