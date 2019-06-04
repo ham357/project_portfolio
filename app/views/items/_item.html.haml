@@ -1,10 +1,8 @@
 .col.s12.m6.l3
   .card.hoverable
     .card-image
-      = image_tag item.image.url, alt: item.title if item.image.url.present?
+      = image_tag item.image.url if item.image.url.present?
     .card-content
-      %span.card-title
-        = item.title
       %p 
         = item.description
     .card-action
