@@ -1,5 +1,7 @@
 $(function(){
   $("#DateCountdown").TimeCircles({
+    start: false,
+    count_past_zero: false,
     "animation": "smooth",
     "bg_width": 1.2,
     "fg_width": 0.1,
@@ -27,4 +29,9 @@ $(function(){
         }
     }
   });
+  $(".start").click(function(){ $("#DateCountdown").TimeCircles().start(); });
+  $(".stop").click(function(){ $("#DateCountdown").TimeCircles().stop(); });
+  $(".restart").click(function(){ $("#DateCountdown").TimeCircles().restart(); }); 
+
+  $("#DateCountdown").TimeCircles().end().$('form').submit(); 
 });

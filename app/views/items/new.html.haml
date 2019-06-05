@@ -1,5 +1,9 @@
 .new__container
   #DateCountdown{"data-timer" => "1200"}
+  .time-btn__wrapper
+    %button.btn.btn-success.start Start
+    %button.btn.btn-danger.stop Stop
+    %button.btn.btn-info.restart Restart
   .row
     = form_for @item,class: "col s12" do |f|
       .row
