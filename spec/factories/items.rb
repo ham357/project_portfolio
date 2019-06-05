@@ -2,7 +2,7 @@ FactoryBot.define do
 
   factory :item do
     description        {"これはテスト。テストなのです。"}
-    image
+      image            {File.open("#{Rails.root}/public/uploads/no_image.jpg")}
     user_id
   end
 
