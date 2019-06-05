@@ -1,0 +1,23 @@
+.new__container
+  #DateCountdown{"data-timer" => "1200"}
+  .time-btn__wrapper
+    %button.btn.btn-success.start Start
+    %button.btn.btn-danger.stop Stop
+    %button.btn.btn-info.restart Restart
+  .row
+    = form_for @item,class: "col s12" do |f|
+      .row
+        .input-field.col.s12
+          = f.text_area :contents, id: "textarea2", class: "materialize-textarea",'data-length': "1000"
+          = f.label :contents, "contents"
+      .row
+        .file-field.input-field.col.s12
+          .btn
+            %span File
+            = f.file_field :image
+          .file-path-wrapper
+            %input.file-path.validate{:type => "text"}/
+      %button.btn.waves-effect.waves-light{:name => "action", :type => "submit"}
+        Submit
+        %i.material-icons.right send
+
