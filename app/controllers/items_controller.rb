@@ -26,7 +26,7 @@ end
   private
 
   def item_params
-    params.require(:item).permit(:title,:description,:image).merge(user_id: 1)
+    params.require(:item).permit(:contents,:image).merge(user_id: current_user.id)
   end
 
 end
