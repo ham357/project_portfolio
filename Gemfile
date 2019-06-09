@@ -58,7 +58,6 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
-  gem 'fog-aws'
 end
 
 group :test do
@@ -82,3 +81,4 @@ gem 'hamlit'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
