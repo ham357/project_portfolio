@@ -5,5 +5,8 @@
     .card-content
       %p 
         = item.contents
+      %p
+        = item.created_at.strftime("%Y年%m月%d日 %H時%M分")
     .card-action
       %a{:href => "#"} This is a link
+      %i.small.material-icons.grey-text.text-darken-4.right more_vert
