@@ -49,8 +49,9 @@ test:
 #
 production:
   <<: *default
-  database: project_portfolio
+  database: <%= ENV['DB_DATABASE'] %>
   username: root
-  password: "<%= ENV['DATABASE_PASSWORD'] %>"
+  host: <%= ENV['DB_HOST'] %>
+  password: "<%= ENV['DB_PASSWORD'] %>"
   socket: /var/lib/mysql/mysql.sock
-  host: project-portfolio.c540vofz4x7g.ap-northeast-1.rds.amazonaws.com
+
