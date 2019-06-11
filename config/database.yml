@@ -49,8 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: "<%= ENV['DB_DATABASE'] %>"
+  database: <%= ENV['DB_DATABASE'] %>
   username: root
   password: "<%= ENV['DB_PASSWORD'] %>"
   socket: /var/lib/mysql/mysql.sock
-  host: "<%= ENV['DB_HOST'] %>"
+  host: <%= ENV['DB_HOST'] %>
